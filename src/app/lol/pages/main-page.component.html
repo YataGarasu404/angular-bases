@@ -1,0 +1,17 @@
+<!-- Diseño ---------------------------------------------->
+<h1>Campeones League of Legends</h1>
+<hr>
+
+<!-- Componentes ----------------------------------------->
+<div class="row">
+    <div class="col">
+        <lol-list [characterListItem]="characters"
+        (onDelete)="onDelete($event)"></lol-list>
+    </div>
+
+    <div class="col">
+<!-- "(onNewCharacter)" emite info que se recibe en "$event" -->
+        <lol-character (onNewCharacter)="onNewCharacter($event)">
+        </lol-character>
+    </div>
+</div>

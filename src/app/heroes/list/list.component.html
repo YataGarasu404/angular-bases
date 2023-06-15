@@ -1,0 +1,33 @@
+<h3>Listado de Héroes</h3>
+<hr>
+<!-- Último objeto eliminado ------------------------->
+<div *ngIf="deleted; else noDeleted">
+    <h3>Héroe Eliminado
+        <small class="text-danger"> {{deleted}} </small>
+    </h3>
+</div>
+
+<!-- "ng-template" crea una plantilla que no existe -->
+<!-- "#" para una etiqueta de referencia-------------->
+<ng-template #noDeleted>
+    <h3>No has eliminado ningún Héroe</h3>
+</ng-template>
+
+
+<!-- Botón para eliminar ----------------------------->
+<!-- "lenght" para medir el tamaño de la lista ------->
+<button *ngIf="heroNames.length > 0"
+(click)="removeHero()"
+class="btn btn-outline-danger mt-2">
+    Borrar Final
+</button>
+
+<!-- Lista ------------------------------------------->
+<ul class="mt-2 list-group">
+
+<!--"a-ngFor" para replicar items de la lista -------->
+    <li *ngFor="let name of heroNames"
+    class="list-group-item">
+    {{name}}
+    </li>
+</ul>

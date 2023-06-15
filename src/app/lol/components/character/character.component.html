@@ -1,0 +1,30 @@
+<!-- En un gran número de casos, se encierra un 
+valor en "()" para indicar un evento y "[]" para
+indicar un atributo ----------------------------
+"[()]" para indicar ambos --------------------->
+
+<h4>Agregar Campeón</h4>
+<form class="row" 
+(ngSubmit)="emitCharacter()">
+
+    <input type="text" 
+    [(ngModel)]="character.name" 
+    name="name"
+    placeholder="Nombre" 
+    class="form-control mb-2">
+
+    <input type="string" 
+    [(ngModel)]="character.lane" 
+    name="lane"
+    placeholder="Línea" 
+    class="form-control mb-2">
+
+    <button type="submit" 
+    class="btn btn-primary">
+        Agregar
+    </button>
+
+    <!-- <pre><br>{{ character | json }}</pre> 
+    Mapeo en json para visualizar el objeto-->
+
+</form>

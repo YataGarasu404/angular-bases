@@ -1,10 +1,14 @@
+// === Archivo principal -------------------------
 import { Component } from '@angular/core';
 
+// === Referencias a los archivos utilizados -----
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'//Html
 })
+
+// === Class -------------------------------------
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Hello World';
+
 }
